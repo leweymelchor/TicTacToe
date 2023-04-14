@@ -1,5 +1,3 @@
-# Tic-Tac-Toe
-
 def print_board(entries):
     line = "+---+---+---+"
     output = line
@@ -17,6 +15,12 @@ def print_board(entries):
     print(output)
     print()
 
+def game_over(board, current_player):
+
+    print_board(board)
+    print(current_player, "has won")
+    exit()
+
 
 board = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 current_player = "X"
@@ -28,37 +32,21 @@ for move_number in range(1, 10):
     board[space_number] = current_player
 
     if board[0] == board[1] and board[1] == board[2]:
-        print_board(board)
-        print(board[0], "has won")
-        exit()
+        game_over(board, current_player)
     elif board[3] == board[4] and board[4] == board[5]:
-        print_board(board)
-        print(board[3], "has won")
-        exit()
+        game_over(board, current_player)
     elif board[6] == board[7] and board[7] == board[8]:
-        print_board(board)
-        print(board[6], "has won")
-        exit()
+        game_over(board, current_player)
     elif board[0] == board[3] and board[3] == board[6]:
-        print_board(board)
-        print(board[0], "has won")
-        exit()
+        game_over(board, current_player)
     elif board[1] == board[4] and board[4] == board[7]:
-        print_board(board)
-        print(board[1], "has won")
-        exit()
+        game_over(board, current_player)
     elif board[2] == board[5] and board[5] == board[8]:
-        print_board(board)
-        print(board[2], "has won")
-        exit()
+        game_over(board, current_player)
     elif board[0] == board[4] and board[4] == board[8]:
-        print_board(board)
-        print(board[0], "has won")
-        exit()
+        game_over(board, current_player)
     elif board[2] == board[4] and board[4] == board[6]:
-        print_board(board)
-        print(board[0], "has won")
-        exit()
+        game_over(board, current_player)
 
     if current_player == "X":
         current_player = "O"
