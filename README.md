@@ -1,6 +1,9 @@
 # Tic Tac Toe
 
+## Description
 A standard implementation of a console-based Tic-Tac-Toe game written in Python.
+
+https://user-images.githubusercontent.com/102191748/234722687-5dffaa75-3261-4407-94b6-c4202a9d0b8c.mov
 
 ## Start it up
 
